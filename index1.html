@@ -93,7 +93,7 @@
     }
   </style>
 
-  <!-- ✅ Firebase v8 SDKs (Fully compatible with your code) -->
+  <!-- ✅ Firebase v8 SDKs -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
@@ -145,7 +145,6 @@
   </div>
 
   <script>
-    // ✅ Firebase config (yahi wala jo tumne diya)
     const firebaseConfig = {
       apiKey: "AIzaSyB-eSMCjoU4IFq37Rys3IVpMmj5ZGlbbhc",
       authDomain: "sgs-exam-cracker1.firebaseapp.com",
@@ -155,9 +154,11 @@
       appId: "1:891645225570:web:9de6d94fff4acc3d927f3b"
     };
 
-    // ✅ Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
+
+    // ✅ Optional: uncomment this line if you want to force logout every time
+    // auth.signOut();
 
     function googleLogin() {
       const provider = new firebase.auth.GoogleAuthProvider();
